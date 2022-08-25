@@ -8,22 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
 namespace InventoryManagement
 {
-    public partial class Form2 : Form
+    public partial class AdminDashboard : Form
     {
-        public Form2()
+        public AdminDashboard()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form3 f3 = new Form3();
-            f3.Show();
-            Visible = false;
         }
     }
 }

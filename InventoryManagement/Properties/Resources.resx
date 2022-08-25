@@ -118,31 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="photo_2022-08-22_16-51-02" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\photo_2022-08-22_16-51-02.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="photo_2022-08-22_16-51-13" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\photo_2022-08-22_16-51-13.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="photo_2022-08-22_16-50-55" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\photo_2022-08-22_16-50-55.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="photo_2022-08-22_16-51-08" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\photo_2022-08-22_16-51-08.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="photo_2022-08-22_17-41-20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\photo_2022-08-22_17-41-20.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="photo_2022-08-22_16-51-02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\photo_2022-08-22_16-51-02.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="photo_2022-08-22_17-41-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\photo_2022-08-22_17-41-24.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="photo_2022-08-22_17-41-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\photo_2022-08-22_17-41-30.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="photo_2022-08-22_17-41-35" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\photo_2022-08-22_17-41-35.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="photo_2022-08-22_16-50-55" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\photo_2022-08-22_16-50-55.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="photo_2022-08-22_17-41-40" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\photo_2022-08-22_17-41-40.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="photo_2022-08-22_17-41-20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\photo_2022-08-22_17-41-20.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="photo_2022-08-22_17-41-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\photo_2022-08-22_17-41-30.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="photo_2022-08-22_16-51-13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\photo_2022-08-22_16-51-13.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
