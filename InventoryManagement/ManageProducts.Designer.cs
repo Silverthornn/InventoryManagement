@@ -66,6 +66,7 @@
             this.button6.TabIndex = 13;
             this.button6.Text = "Home";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -75,6 +76,7 @@
             this.button5.TabIndex = 12;
             this.button5.Text = "Settings";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -84,6 +86,7 @@
             this.button4.TabIndex = 11;
             this.button4.Text = "View Stock";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -93,6 +96,7 @@
             this.button3.TabIndex = 10;
             this.button3.Text = "Manage Stock";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -111,6 +115,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Categories";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -201,6 +206,7 @@
             this.button7.TabIndex = 24;
             this.button7.Text = "ADD";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -210,6 +216,7 @@
             this.button8.TabIndex = 25;
             this.button8.Text = "UPDATE";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -219,6 +226,7 @@
             this.button9.TabIndex = 26;
             this.button9.Text = "REMOVE";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // ManageProducts
             // 
@@ -247,6 +255,7 @@
             this.Controls.Add(this.splitter1);
             this.Name = "ManageProducts";
             this.Text = "ManageProducts";
+            this.Load += new System.EventHandler(this.ManageProducts_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

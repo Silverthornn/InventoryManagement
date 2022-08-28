@@ -26,7 +26,7 @@ namespace InventoryManagement
             {
                 try
                 {
-                    string countQuerry = "select count(*) from inventorymanager where aid = '" + textBox1.Text + "' ";
+                    string countQuerry = "select count(*) from admin where aid = '" + textBox1.Text + "' ";
                     command = new MySqlCommand(countQuerry, dbClass.connection);
                     Int32 count = Convert.ToInt32(command.ExecuteScalar());
                     if (count > 0)
@@ -51,6 +51,13 @@ namespace InventoryManagement
             {
                 MessageBox.Show("Please make sure every field is complete");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.Show();
+            Visible = false;
         }
     }
 }

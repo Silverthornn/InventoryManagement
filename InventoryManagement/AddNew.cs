@@ -35,7 +35,7 @@ namespace InventoryManagement
                     }
                     else
                     {
-                        string query = "insert into attendant values ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox4.Text + "')";
+                        string query = "insert into attendant(name, email, password, address) values ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox4.Text + "')";
                         command = new MySqlCommand(query, dbClass.connection);
                         command.ExecuteNonQuery();
                         MessageBox.Show("New attendant added succesfully!");

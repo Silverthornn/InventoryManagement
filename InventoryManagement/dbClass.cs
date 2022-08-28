@@ -9,7 +9,7 @@ namespace InventoryManagement
 {
     internal class dbClass
     {
-        public static string connectionString = "server=localhost: database=admin; uid=root; pwd=\"\";";
+        public static string connectionString = "server=localhost; database=inventorymanager; uid=root; pwd=\"\";";
         public static MySqlConnection connection = new MySqlConnection(connectionString);
 
         public static void openConnection()

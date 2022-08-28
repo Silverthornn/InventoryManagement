@@ -35,10 +35,10 @@ namespace InventoryManagement
                     }
                     else
                     {
-                        string query = "insert into attendant values ('" + textBox1.Text + "', '" + textBox2.Text + "')";
+                        string query = "insert into admin values ('" + textBox1.Text + "', '" + textBox2.Text + "')";
                         command = new MySqlCommand(query, dbClass.connection);
                         command.ExecuteNonQuery();
-                        MessageBox.Show("New attendant added succesfully!");
+                        MessageBox.Show("New admin added succesfully!");
                         AdminDashboard admin = new AdminDashboard();
                         admin.Show();
                         Visible = false;
@@ -70,10 +70,10 @@ namespace InventoryManagement
                     Int32 count = Convert.ToInt32(command.ExecuteScalar());
                     if (count > 0)
                     {
-                        string query = "delete from attendant where  name = '" + textBox1.Text + "' ";
+                        string query = "delete from admin where  name = '" + textBox1.Text + "' ";
                         command = new MySqlCommand(query, dbClass.connection);
                         command.ExecuteNonQuery();
-                        MessageBox.Show("Attendant deleted succesfully!");
+                        MessageBox.Show("Admin deleted succesfully!");
                         AdminDashboard admin = new AdminDashboard();
                         admin.Show();
                         Visible = false;
@@ -96,6 +96,41 @@ namespace InventoryManagement
             {
                 MessageBox.Show("Please make sure every field is complete");
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AdminDashboard admin = new AdminDashboard();
+            admin.Show();
+            Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProductCategories products = new ProductCategories();
+            products.Show();
+            Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ManageProducts manageProd = new ManageProducts();
+            manageProd.Show();
+            Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ManageStock stocks = new ManageStock();
+            stocks.Show();
+            Visible = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ViewStock viewstock = new ViewStock();
+            viewstock.Show();
+            Visible = false;
         }
     }
 }

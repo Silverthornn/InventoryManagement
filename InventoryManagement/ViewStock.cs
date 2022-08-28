@@ -65,5 +65,33 @@ namespace InventoryManagement
         {
             fetchProducts();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AdminDashboard admin = new AdminDashboard();
+            admin.Show();
+            Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProductCategories products = new ProductCategories();
+            products.Show();
+            Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ManageProducts manageProd = new ManageProducts();
+            manageProd.Show();
+            Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ManageStock stock = new ManageStock();
+            stock.Show();
+            Visible = false;
+        }
     }
 }

@@ -102,6 +102,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form4
             // 
@@ -118,7 +119,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form4";
-            this.Text = "Form4";
+            this.Text = "Admin Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 

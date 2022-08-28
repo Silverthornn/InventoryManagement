@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace InventoryManagement
 {
@@ -15,6 +16,29 @@ namespace InventoryManagement
         public AdminDashboard()
         {
             InitializeComponent();
+        }
+
+        private void fetchAttendants()
+        {
+            string query = "select * from attendants";
+            DataSet ds = new DataSet();
+            DataView dv;
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            try
+            {
+                dbClass.openConnection();
+                MySqlCommand command = new MySqlCommand(query, dbClass.connection);
+                adapter.SelectCommand = command;
+                adapter.Fill(ds);
+                dbClass.closeConnection();
+
+                dv = ds.Tables[0].DefaultView;
+                dataGridView1.DataSource = dv;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
