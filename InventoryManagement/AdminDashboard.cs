@@ -20,7 +20,7 @@ namespace InventoryManagement
 
         private void fetchAttendants()
         {
-            string query = "select * from attendants";
+            string query = "select * from attendant";
             DataSet ds = new DataSet();
             DataView dv;
             MySqlDataAdapter adapter = new MySqlDataAdapter();
@@ -95,6 +95,11 @@ namespace InventoryManagement
             SalesReport sales = new SalesReport();
             sales.Show();
             Visible = false;
+        }
+
+        private void AdminDashboard_Load(object sender, EventArgs e)
+        {
+            fetchAttendants();
         }
     }
 }

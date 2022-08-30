@@ -35,7 +35,7 @@ namespace InventoryManagement
                     }
                     else
                     {
-                        string query = "insert into product values ('" + textBox1.Text + "','"+ comboBox1.DisplayMember +"', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox4.Text + "')";
+                        string query = "insert into product(Product_Name, Product Category, Price, Quantity) values ('" + textBox1.Text + "','"+ comboBox1.DisplayMember +"', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox4.Text + "')";
                         command = new MySqlCommand(query, dbClass.connection);
                         command.ExecuteNonQuery();
                         MessageBox.Show("New product added succesfully!");
@@ -178,12 +178,16 @@ namespace InventoryManagement
         {
             dbClass.openConnection();
             MySqlCommand command;
-            string query = "select name from productcategory";
+            string query = "select * from productcategory";
             command = new MySqlCommand(query, dbClass.connection);
-            command.ExecuteNonQuery();
-            comboBox1.DataSource = query.ToList();
-            comboBox1.ValueMember = "name";
-            comboBox1.DisplayMember = "Name";
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                comboBox1.Items.Add(reader.GetString("Name"));
+            }
+
+            dbClass.closeConnection();
+            
         }
     }
 }

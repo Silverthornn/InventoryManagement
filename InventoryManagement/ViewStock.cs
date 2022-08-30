@@ -21,7 +21,7 @@ namespace InventoryManagement
 
         private void fetchProducts()
         {
-            string query = "select * from products";
+            string query = "select * from product";
             DataSet ds  = new DataSet();
             DataView dv;
             MySqlDataAdapter adapter = new MySqlDataAdapter();

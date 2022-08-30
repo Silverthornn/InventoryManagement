@@ -37,10 +37,10 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button7 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -136,6 +136,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Attendants";
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(230, 115);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(127, 23);
+            this.button8.TabIndex = 2;
+            this.button8.Text = "Remove Attendant";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(57, 11);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(243, 92);
+            this.dataGridView1.TabIndex = 1;
+            // 
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(34, 115);
@@ -155,25 +174,6 @@
             this.label1.Size = new System.Drawing.Size(185, 26);
             this.label1.TabIndex = 9;
             this.label1.Text = "Welcome, Admin";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(57, 11);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(243, 92);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(230, 115);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(127, 23);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Remove Attendant";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -204,6 +204,7 @@
             this.Controls.Add(this.splitter1);
             this.Name = "AdminDashboard";
             this.Text = "AdminDashboard";
+            this.Load += new System.EventHandler(this.AdminDashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
