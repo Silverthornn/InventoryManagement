@@ -35,7 +35,7 @@ namespace InventoryManagement
                     }
                     else
                     {
-                        string query = "insert into product(Product_Name, Product Category, Price, Quantity) values ('" + textBox1.Text + "','"+ comboBox1.DisplayMember +"', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox4.Text + "')";
+                        string query = "insert into product(Product_Name, Product Category, Price, Quantity) values ('" + textBox1.Text + "','" + comboBox1.DisplayMember + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox4.Text + "')";
                         command = new MySqlCommand(query, dbClass.connection);
                         command.ExecuteNonQuery();
                         MessageBox.Show("New product added succesfully!");
@@ -111,7 +111,7 @@ namespace InventoryManagement
                     Int32 count = Convert.ToInt32(command.ExecuteScalar());
                     if (count > 0)
                     {
-                        string query = "update table product where  product_name = '" + textBox1.Text + "' ";
+                        string query = "update table product set product_name = '" + textBox1.Text + "', product category = '" + comboBox1.DisplayMember + "', price = '" + textBox2.Text + "', qunatity = '" + textBox3.Text + "'  ";
                         command = new MySqlCommand(query, dbClass.connection);
                         command.ExecuteNonQuery();
                         MessageBox.Show("Product details succesfully updated!");

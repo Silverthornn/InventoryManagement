@@ -66,9 +66,13 @@ namespace InventoryManagement
                         MessageBox.Show("Transaction Succesfully Added!");
 
                         string otherquery = "insert into printSales(Product_Name, Quantity) values ('" + textBox1.Text + "', '" + textBox2.Text + "')";
-                        command = new MySqlCommand(query, dbClass.connection);
+                        command = new MySqlCommand(otherquery, dbClass.connection);
                         command.ExecuteNonQuery();
-                        
+
+                        string updatequery = "update product  set quantity = quantity - '" +textBox2.Text+ "'";
+                        command = new MySqlCommand(updatequery, dbClass.connection);
+                        command.ExecuteNonQuery();
+
 
                         dbClass.closeConnection();
                     }
@@ -118,6 +122,57 @@ namespace InventoryManagement
         private void printDocument2_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
 
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap bm = new Bitmap(this.dataGridView1.Width, this.dataGridView1.Height);
+
+            dataGridView1.DrawToBitmap(bm, new Rectangle(0, 0, this.dataGridView1.Width, this.dataGridView1.Height));
+            e.Graphics.DrawImage(bm, 0, 0);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dbClass.openConnection();
+            MySqlCommand command;
+            if (textBox1.Text != "")
+            {
+                try
+                {
+                    string countQuerry = "select count(*) from product where product_name = '" + textBox1.Text + "' ";
+                    command = new MySqlCommand(countQuerry, dbClass.connection);
+                    Int32 count = Convert.ToInt32(command.ExecuteScalar());
+                    if (count > 0)
+                    {
+                        string query = "delete from printSales where  name = '" + textBox1.Text + "' ";
+                        command = new MySqlCommand(query, dbClass.connection);
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Product removed from daily transactions");
+
+                        string updatequery = "update product  set quantity = quantity - '" + textBox2.Text + "'";
+                        command = new MySqlCommand(updatequery, dbClass.connection);
+                        command.ExecuteNonQuery();
+
+                        dbClass.closeConnection();
+                    }
+                    else
+                    {
+
+                        MessageBox.Show("User doesn't exist!");
+                        dbClass.closeConnection();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Please make sure every field is complete");
+            }
         }
     }
 }
